@@ -1,0 +1,32 @@
+<div class="container"> 
+	<div class="center-block text-center mto50">
+	<a href="#/indicadores" class="btn btn-info">Ver indicadores</a>
+	</div>
+	<hr>
+  <table class="table table-striped mto50">
+    <thead>
+      <tr>
+        <th><h4>Nombre</h4></th>
+        <th><h4>Tipo de Evento</h4></th>
+        <th><h4>Ciudad</h4></th>
+        <th><h4>Tramo</h4></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="m in model">
+        <td>{{m.nombreAfectado}}</td>
+        <td>
+        	<span ng-if="m.tipo == 'incidente'" class="label label-warning">{{m.tipo}}</span>
+        	<span ng-if="m.tipo == 'accidente'" class="label label-danger">{{m.tipo}}</span>
+        </td>
+        <td>{{m.ciudad}}</td>
+        <td>{{m.tramo}}</td>
+        <td>
+        <a ng-if="m.tipo == 'incidente'" href="#/incidentes/{{ $index }}" class="btn btn-success">Editar</a>
+        <a ng-if="m.tipo == 'accidente'" href="#/accidentes/{{ $index }}" class="btn btn-success">Editar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="panel panel-danger mto50">
+        <div class="panel-heading">Accidente</div>
+        <div class="panel-body">
+        <div ng-show="empty" class="alert alert-danger">
+          <strong>Alerta!</strong> {{message}}.
+        </div>
+            <label>Nombre Afectado</label>
+            <input type="text" class="form-control" ng-model="nombre"><br>
+
+            <label>Edad</label>
+            <input type="text" class="form-control" ng-model="edad"><br>
+
+            <select class="form-control" ng-model="categoria">
+              <option>{{categoria}}</option>
+              <option>{{op1}}</option>
+              <option>{{op2}}</option>
+              <option>{{op3}}</option>
+            </select><br>
+
+            <label>Ciudad</label>
+            <input type="text" class="form-control" ng-model="ciudad"><br>
+
+            <label>Tramo</label>
+            <input type="text" class="form-control" ng-model="tramo"><br>
+
+            <label>Numero Vehiculos</label>
+            <input type="text" class="form-control" ng-model="vehiculosAfectados"><br>
+        </div>
+    </div>
+    <a href="#/" class="btn btn-info">Volver</a>
+    <button type="submit" class="btn btn-primary" ng-click="guardar()"> Actualizar </button>
+</div>
